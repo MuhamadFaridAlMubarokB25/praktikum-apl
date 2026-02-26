@@ -3,17 +3,25 @@ using namespace std;
 
 // g++ 2509106087-MuhamadFaridAlMubarok-PT-1.cpp -o 2509106087-MuhamadFaridAlMubarok-PT-1 ; .\2509106087-MuhamadFaridAlMubarok-PT-1 (Agar Lebih Mudah Di run)
 
-string username, password;
-string usernameBenar = "farid";
-string passwordBenar = "087";
-int percobaan = 1;
-int pilihan;
 
 int main () {
+    
+    string username, password;
+    string usernameBenar = "farid";
+    string passwordBenar = "087";
+    int percobaan = 1;
+    int pilihan;
 
     while (percobaan <= 3) {
         system("cls");
-        cout << "\nSisa Percobaan: " << 3 - percobaan << endl;
+
+        cout << "+----------------------------------------------------------------------------+\n";
+        cout << "|                                                                            |\n";
+        cout << "|     Aplikasi Kalkulator Konversi Jarak (Meter, Kilometer, Centimeter)      |\n";
+        cout << "|                                                                            |\n";
+        cout << "+----------------------------------------------------------------------------+\n";
+
+        cout << "\nSilahkan Login Terlebih Dahulu" << endl;
 
         cout << "\nMasukkan Username: ";
         cin >> username;
@@ -24,7 +32,7 @@ int main () {
             cout << "Login Berhasil!" << endl;
 
             cout << "\n[Tekan Enter Untuk Melanjutkan...]";
-            cin.ignore();
+            cin.ignore(10000, '\n');
             cin.get();
 
             do {
@@ -36,20 +44,19 @@ int main () {
             } while (pilihan != 4);
             
         } else {
-            cout << "Username atau Password salah!";
+            cout << "\nUsername atau Password salah!";
             percobaan++;
+            cout << "\nJumlah percobaan: " << percobaan - 1 << endl; 
             cout << "\n[Tekan Enter Untuk Melanjutkan...]";
-            cin.ignore();
+            cin.ignore(10000, '\n');
             cin.get();
-            continue;;
-        }
+            continue;
 
-        if (login == 3) {
-            cout << RED << "Kesempatan login habis. Akses ditolak!\n" << RESET;
-            return 0;
+            if (percobaan <= 3) {
+            cout << "Kesempatan login habis. Akses ditolak!\n";
+            } 
         }
     }
     
-
     return 0;
 }
