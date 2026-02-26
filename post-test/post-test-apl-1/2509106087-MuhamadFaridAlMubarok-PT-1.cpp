@@ -33,24 +33,6 @@ int main () {
             cout << "\n[Tekan Enter Untuk Melanjutkan...]";
             cin.ignore(10000, '\n');
             cin.get();
-            break;
-        } else {
-            cout << "\nUsername atau Password salah!";
-            percobaan++;
-            cout << "\nJumlah percobaan: " << percobaan - 1 << endl; 
-            cout << "\n[Tekan Enter Untuk Melanjutkan...]";
-            cin.ignore(10000, '\n');
-            cin.get();
-            continue;
-
-            if (percobaan <= 3) {
-            cout << "Kesempatan login habis. Akses ditolak!\n";
-            cout << "\n[Tekan Enter Untuk Melanjutkan...]";
-            cin.ignore(10000, '\n');
-            cin.get();
-            } 
-        }
-    }
 
             do {
                 system("cls");
@@ -72,18 +54,18 @@ int main () {
                     double meter;
                     double hasilKilometer = 0;
                     double hasilCentimeter = 0;
-
+        
                     cout << "\n--- Konversi Meter Ke Kilometer dan Centimater ---\n";
                     cout << "\nMasukkan Angka: ";
                     cin >> meter;
-
+        
                     hasilKilometer = meter / 1000;
                     hasilCentimeter = meter * 100;
-
+        
                     cout << "\nHasil Konversi dari " << meter << " Meter Adalah:\n";
                     cout << "-> " << hasilKilometer << " Kilometer\n"; 
                     cout << "-> " << hasilCentimeter << " centimeter\n";
-
+        
                     cout << "\n[Tekan Enter Untuk Melanjutkan...]";
                     cin.ignore(10000, '\n');
                     cin.get();
@@ -93,18 +75,18 @@ int main () {
                     double kilometer;
                     double hasilMeter = 0;
                     double hasilCentimeter = 0;
-
+        
                     cout << "\n--- Konversi Kilometer Ke Meter dan Centimater ---\n";
                     cout << "\nMasukkan Angka: ";
                     cin >> kilometer;
-
+        
                     hasilMeter = kilometer * 1000;
                     hasilCentimeter = kilometer * 100000;
-
+        
                     cout << "\nHasil Konversi dari " << kilometer << " Meter Adalah:\n";
                     cout << "-> " << hasilMeter << " Kilometer\n"; 
                     cout << "-> " << hasilCentimeter << " centimeter\n";
-
+        
                     cout << "\n[Tekan Enter Untuk Melanjutkan...]";
                     cin.ignore(10000, '\n');
                     cin.get();
@@ -114,25 +96,32 @@ int main () {
                     double centimeter;
                     double hasilMeter = 0;
                     double hasilKilometer = 0;
-
+        
                     cout << "\n--- Konversi Kilometer Ke Meter dan Centimater ---\n";
                     cout << "\nMasukkan Angka: ";
                     cin >> centimeter;
-
+        
                     hasilMeter = centimeter / 100;
-                    hasilKilometer = centimeter / 100000;
-
+                    hasilKilometer = centimeter / 100000.0;
+        
                     cout << "\nHasil Konversi dari " << centimeter << " Meter Adalah:\n";
                     cout << "-> " << hasilMeter << " Kilometer\n"; 
                     cout << "-> " << hasilKilometer << " centimeter\n";
-
+        
                     cout << "\n[Tekan Enter Untuk Melanjutkan...]";
                     cin.ignore(10000, '\n');
                     cin.get();
                     break;
+                }
+                case 4:{
+                    cout << "\nAnda Keluar dari program\n";
+        
+                    cout << "\n[Tekan Enter Untuk Melanjutkan...]";
+                    cin.ignore(10000, '\n');
+                    cin.get();
                     break;
                 }
-
+        
                 default:
                     cout << "Pilihan Tidak Valid!" << endl;
                     cout << "\n[Tekan Enter Untuk Melanjutkan...]";
@@ -140,8 +129,28 @@ int main () {
                     cin.get();
                     break;
                 }
-
+        
             } while (pilihan != 4);
+
+        } else {
+            cout << "\nUsername atau Password salah! Silahkan Coba Lagi";
+            percobaan++;
+            cout << "\nJumlah percobaan: " << percobaan - 1 << endl; 
+            cout << "\n[Tekan Enter Untuk Melanjutkan...]";
+            cin.ignore(10000, '\n');
+            cin.get();
+            continue;
+
+            if (percobaan <= 3) {
+            cout << "Kesempatan login habis. Akses ditolak!\n";
+            cout << "\n[Tekan Enter Untuk Melanjutkan...]";
+            cin.ignore(10000, '\n');
+            cin.get();
+            break;
+            } 
+        }
+    }
+
     
     return 0;
 }
