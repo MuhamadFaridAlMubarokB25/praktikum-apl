@@ -11,9 +11,9 @@ int pilihan;
 
 int main () {
 
-    while (percobaan < 4) {
+    while (percobaan <= 3) {
         system("cls");
-        cout << "\nSisa Percobaan: " << 4 - percobaan<< endl;
+        cout << "\nSisa Percobaan: " << 3 - percobaan << endl;
 
         cout << "\nMasukkan Username: ";
         cin >> username;
@@ -28,7 +28,8 @@ int main () {
             cin.get();
 
             do {
-                
+                system("cls");
+
                 cout << "Pilih Opsi: ";
                 cin >> pilihan;
 
@@ -41,6 +42,11 @@ int main () {
             cin.ignore();
             cin.get();
             continue;;
+        }
+
+        if (login == 3) {
+            cout << RED << "Kesempatan login habis. Akses ditolak!\n" << RESET;
+            return 0;
         }
     }
     
