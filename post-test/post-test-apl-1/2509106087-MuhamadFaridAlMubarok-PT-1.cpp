@@ -7,6 +7,7 @@ string username, password;
 string usernameBenar = "farid";
 string passwordBenar = "087";
 int percobaan = 1;
+int pilihan;
 
 int main () {
 
@@ -25,6 +26,14 @@ int main () {
             cout << "\n[Tekan Enter Untuk Melanjutkan...]";
             cin.ignore();
             cin.get();
+
+            do {
+                
+                cout << "Pilih Opsi: ";
+                cin >> pilihan;
+
+            } while (pilihan != 4);
+            
         } else {
             cout << "Username atau Password salah!";
             percobaan++;
