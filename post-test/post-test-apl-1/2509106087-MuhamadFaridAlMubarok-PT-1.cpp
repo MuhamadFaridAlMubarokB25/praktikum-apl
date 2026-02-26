@@ -15,12 +15,13 @@ int main () {
     while (percobaan <= 3) {
         system("cls");
 
+        
         cout << "+----------------------------------------------------------------------------+\n";
         cout << "|                                                                            |\n";
         cout << "|     Aplikasi Kalkulator Konversi Jarak (Meter, Kilometer, Centimeter)      |\n";
         cout << "|                                                                            |\n";
         cout << "+----------------------------------------------------------------------------+\n";
-
+        
         cout << "\nSilahkan Login Terlebih Dahulu" << endl;
 
         cout << "\nMasukkan Username: ";
@@ -37,9 +38,37 @@ int main () {
 
             do {
                 system("cls");
-
-                cout << "Pilih Opsi: ";
+                
+                cout << "+-----------------------------------------+\n";
+                cout << "|              PILIH KONVERSI             |\n";  
+                cout << "+-----------------------------------------+\n";
+                cout << "| [1]. Meter -> Kilometer dan Centimeter  |\n";
+                cout << "| [2]. Kilometer -> Meter dan Centimeter  |\n";
+                cout << "| [3]. Centimeter -> Meter dan Kilometer  |\n";
+                cout << "| [4]. Keluar                             |\n";
+                cout << "+-----------------------------------------+\n";
+                cout << "Masukkan Opsi: ";
                 cin >> pilihan;
+
+                switch (pilihan)
+                {
+                case 1:
+                    
+                    break;
+                case 2:
+                    
+                    break;
+                case 3:
+                    
+                    break;
+                case 4:
+                    
+                    break;
+                
+                default:
+                    cout << "Pilihan Tidak Valid!" << endl;
+                    break;
+                }
 
             } while (pilihan != 4);
             
