@@ -63,7 +63,7 @@ int main () {
                     double hasilKilometer = 0;
                     double hasilCentimeter = 0;
 
-                    cout << biru << "\n--- Konversi Meter Ke Kilometer dan Centimater ---\n";
+                    cout << biru << "\n--- Konversi Meter Ke Kilometer dan Centimeter ---\n";
                     cout << "\nMasukkan Angka: ";
                     cin >> panjang;
 
@@ -84,7 +84,7 @@ int main () {
                     double hasilMeter = 0;
                     double hasilCentimeter = 0;
 
-                    cout << cyan << "\n--- Konversi Kilometer Ke Meter dan Centimater ---\n";
+                    cout << cyan << "\n--- Konversi Kilometer Ke Meter dan Centimeter ---\n";
                     cout << "\nMasukkan Angka: ";
                     cin >> panjang;
 
