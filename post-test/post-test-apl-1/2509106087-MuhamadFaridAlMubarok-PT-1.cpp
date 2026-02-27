@@ -1,8 +1,10 @@
 #include <iostream>
 using namespace std;
 
-// g++ 2509106087-MuhamadFaridAlMubarok-PT-1.cpp -o 2509106087-MuhamadFaridAlMubarok-PT-1 ; .\2509106087-MuhamadFaridAlMubarok-PT-1 (Agar Lebih Mudah Di run)
+// Agar Lebih Mudah Nge-Run
+// g++ 2509106087-MuhamadFaridAlMubarok-PT-1.cpp -o 2509106087-MuhamadFaridAlMubarok-PT-1 ; .\2509106087-MuhamadFaridAlMubarok-PT-1
 
+// Kode Warna agar tampilan menarik
 #define merah   "\033[31m"
 #define biru    "\033[34m"
 #define hijau   "\033[32m"
@@ -10,6 +12,8 @@ using namespace std;
 #define magenta "\033[35m"
 #define putih   "\033[0m"
 #define abu     "\033[90m"
+
+// Program Utama 
 
 int main () {
 
@@ -22,6 +26,8 @@ int main () {
     while (percobaan <= 3) {
         system("cls");
         
+        // Bagian Menu Login
+
         cout << "===============================\n";
         cout << "|                             |\n";
         cout << "|  APLIKASI KONVERSI PANJANG  |\n";
@@ -45,6 +51,8 @@ int main () {
             do {
                 system("cls");
                 
+                // Bagian Menu Utama
+
                 cout << "===========================================\n";
                 cout << "|              PILIH KONVERSI             |\n";  
                 cout << "===========================================\n";
@@ -55,6 +63,15 @@ int main () {
                 cout << "===========================================\n";
                 cout << "Masukkan Opsi: ";
                 cin >> pilihan;
+
+                if (!(cin >> pilihan)) {
+                    cin.clear();
+                    cout << merah << "\nError: Pilihan Tidak Valid!\n" << putih;
+                    cout << abu << "\n[Tekan Enter Untuk Melanjutkan...]" << putih;
+                    cin.ignore(10000, '\n');
+                    cin.get();
+                    continue;
+                }
                 
                 switch (pilihan)
                 {
@@ -90,6 +107,7 @@ int main () {
 
                     hasilMeter = panjang * 1000;
                     hasilCentimeter = panjang * 100000;
+
                     cout << "\nHasil Konversi dari " << panjang << " Kilometer Adalah:\n";
                     cout << "-> " << hasilMeter << " Meter\n"; 
                     cout << "-> " << hasilCentimeter << " Centimeter\n" << putih;
@@ -109,6 +127,7 @@ int main () {
 
                     hasilMeter = panjang / 100;
                     hasilKilometer = panjang / 100000.0;
+
                     cout << "\nHasil Konversi dari " << panjang << " Centimeter Adalah:\n";
                     cout << "-> " << hasilMeter << " Meter\n"; 
                     cout << "-> " << hasilKilometer << " Kilometer\n" << putih;
