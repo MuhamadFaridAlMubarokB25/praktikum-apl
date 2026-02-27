@@ -4,7 +4,6 @@ using namespace std;
 // Agar Lebih Mudah Nge-Run
 // g++ 2509106087-MuhamadFaridAlMubarok-PT-1.cpp -o 2509106087-MuhamadFaridAlMubarok-PT-1 ; .\2509106087-MuhamadFaridAlMubarok-PT-1
 
-// Kode Warna agar tampilan menarik
 #define merah   "\033[31m"
 #define biru    "\033[34m"
 #define hijau   "\033[32m"
@@ -12,8 +11,6 @@ using namespace std;
 #define magenta "\033[35m"
 #define putih   "\033[0m"
 #define abu     "\033[90m"
-
-// Program Utama 
 
 int main () {
 
@@ -26,7 +23,6 @@ int main () {
     while (percobaan <= 3) {
         system("cls");
         
-        // Bagian Menu Login
 
         cout << "===============================\n";
         cout << "|                             |\n";
@@ -51,7 +47,6 @@ int main () {
             do {
                 system("cls");
                 
-                // Bagian Menu Utama
 
                 cout << "===========================================\n";
                 cout << "|              PILIH KONVERSI             |\n";  
