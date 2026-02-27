@@ -59,18 +59,18 @@ int main () {
                 switch (pilihan)
                 {
                 case 1: {
-                    double meter;
+                    double panjang;
                     double hasilKilometer = 0;
                     double hasilCentimeter = 0;
 
                     cout << biru << "\n--- Konversi Meter Ke Kilometer dan Centimater ---\n";
                     cout << "\nMasukkan Angka: ";
-                    cin >> meter;
+                    cin >> panjang;
 
-                    hasilKilometer = meter / 1000;
-                    hasilCentimeter = meter * 100;
+                    hasilKilometer = panjang / 1000;
+                    hasilCentimeter = panjang * 100;
                     
-                    cout << "\nHasil Konversi dari " << meter << " Meter Adalah:\n";
+                    cout << "\nHasil Konversi dari " << panjang << " Meter Adalah:\n";
                     cout << "-> " << hasilKilometer << " Kilometer\n"; 
                     cout << "-> " << hasilCentimeter << " centimeter\n" << putih;
 
@@ -80,17 +80,17 @@ int main () {
                     break;
                 }
                 case 2: {
-                    double kilometer;
+                    double panjang;
                     double hasilMeter = 0;
                     double hasilCentimeter = 0;
 
                     cout << cyan << "\n--- Konversi Kilometer Ke Meter dan Centimater ---\n";
                     cout << "\nMasukkan Angka: ";
-                    cin >> kilometer;
+                    cin >> panjang;
 
-                    hasilMeter = kilometer * 1000;
-                    hasilCentimeter = kilometer * 100000;
-                    cout << "\nHasil Konversi dari " << kilometer << " Kilometer Adalah:\n";
+                    hasilMeter = panjang * 1000;
+                    hasilCentimeter = panjang * 100000;
+                    cout << "\nHasil Konversi dari " << panjang << " Kilometer Adalah:\n";
                     cout << "-> " << hasilMeter << " Meter\n"; 
                     cout << "-> " << hasilCentimeter << " Centimeter\n" << putih;
                     cout << abu << "\n[Tekan Enter Untuk Melanjutkan...]" << putih;
@@ -99,17 +99,17 @@ int main () {
                     break;
                 }
                 case 3:{
-                    double centimeter;
+                    double panjang;
                     double hasilMeter = 0;
                     double hasilKilometer = 0;
 
                     cout << magenta << "\n--- Konversi Centimeter Ke Meter dan Kilometer ---\n";
                     cout << "\nMasukkan Angka: ";
-                    cin >> centimeter;
+                    cin >> panjang;
 
-                    hasilMeter = centimeter / 100;
-                    hasilKilometer = centimeter / 100000.0;
-                    cout << "\nHasil Konversi dari " << centimeter << " Centimeter Adalah:\n";
+                    hasilMeter = panjang / 100;
+                    hasilKilometer = panjang / 100000.0;
+                    cout << "\nHasil Konversi dari " << panjang << " Centimeter Adalah:\n";
                     cout << "-> " << hasilMeter << " Meter\n"; 
                     cout << "-> " << hasilKilometer << " Kilometer\n" << putih;
                     cout << abu << "\n[Tekan Enter Untuk Melanjutkan...]" << putih;
