@@ -3,12 +3,18 @@ using namespace std;
 
 // g++ 2509106087-MuhamadFaridAlMubarok-PT-1.cpp -o 2509106087-MuhamadFaridAlMubarok-PT-1 ; .\2509106087-MuhamadFaridAlMubarok-PT-1 (Agar Lebih Mudah Di run)
 
-
+#define merah   "\033[31m"
+#define biru    "\033[34m"
+#define hijau   "\033[32m"
+#define cyan    "\033[36m"
+#define magenta "\033[35m"
+#define putih   "\033[0m"
+#define abu     "\033[90m"
 
 int main () {
 
     string username, password;
-    string usernameBenar = "Muhamad farid";
+    string usernameBenar = "farid";
     string passwordBenar = "087";
     int percobaan = 1;
     int pilihan;
@@ -16,22 +22,22 @@ int main () {
     while (percobaan <= 3) {
         system("cls");
         
-        cout << "+------------------------------------------------------------+\n";
-        cout << "|                                                            |\n";
-        cout << "|  APLIKASI KONVERSI PANJANG (Meter, Kilometer, Centimeter)  |\n";
-        cout << "|                                                            |\n";
-        cout << "+------------------------------------------------------------+\n";
+        cout << "===============================\n";
+        cout << "|                             |\n";
+        cout << "|  APLIKASI KONVERSI PANJANG  |\n";
+        cout << "|                             |\n";
+        cout << "===============================\n";
         
-        cout << "\nSilahkan Login Terlebih Dahulu" << endl;
+        cout << hijau << "\nSilahkan Login Terlebih Dahulu" << putih << endl;
 
         cout << "\nMasukkan Username: ";
-        getline(cin, username);
+        cin >> username;
         cout << "Masukkan Password: ";
-        getline(cin, password);
+        cin >> password;
 
         if (username == usernameBenar && password == passwordBenar) {
-            cout << "Login Berhasil!" << endl;
-            cout << "\n[Tekan Enter Untuk Melanjutkan...]";
+            cout << hijau << "Login Berhasil!" << putih <<endl;
+            cout << abu << "\n[Tekan Enter Untuk Melanjutkan...]" << putih;
             cin.ignore(10000, '\n');
             cin.get();
 
@@ -39,14 +45,14 @@ int main () {
             do {
                 system("cls");
                 
-                cout << "+-----------------------------------------+\n";
+                cout << "===========================================\n";
                 cout << "|              PILIH KONVERSI             |\n";  
-                cout << "+-----------------------------------------+\n";
-                cout << "| [1]. Meter -> Kilometer dan Centimeter  |\n";
-                cout << "| [2]. Kilometer -> Meter dan Centimeter  |\n";
-                cout << "| [3]. Centimeter -> Meter dan Kilometer  |\n";
-                cout << "| [4]. Keluar                             |\n";
-                cout << "+-----------------------------------------+\n";
+                cout << "===========================================\n";
+                cout << "| " << biru << "[1]. Meter -> Kilometer dan Centimeter" << putih <<"  |\n";
+                cout << "| " << cyan << "[2]. Kilometer -> Meter dan Centimeter" << putih <<"  |\n";
+                cout << "| " << magenta << "[3]. Centimeter -> Meter dan Kilometer" << putih <<"  |\n";
+                cout << "| " << merah << "[4]. Keluar" << putih <<"                             |\n";
+                cout << "===========================================\n";
                 cout << "Masukkan Opsi: ";
                 cin >> pilihan;
                 
@@ -57,19 +63,18 @@ int main () {
                     double hasilKilometer = 0;
                     double hasilCentimeter = 0;
 
-                    cout << "\n--- Konversi Meter Ke Kilometer dan Centimater ---\n";
+                    cout << biru << "\n--- Konversi Meter Ke Kilometer dan Centimater ---\n";
                     cout << "\nMasukkan Angka: ";
                     cin >> meter;
-
 
                     hasilKilometer = meter / 1000;
                     hasilCentimeter = meter * 100;
                     
                     cout << "\nHasil Konversi dari " << meter << " Meter Adalah:\n";
                     cout << "-> " << hasilKilometer << " Kilometer\n"; 
-                    cout << "-> " << hasilCentimeter << " centimeter\n";
+                    cout << "-> " << hasilCentimeter << " centimeter\n" << putih;
 
-                    cout << "\n[Tekan Enter Untuk Melanjutkan...]";
+                    cout << abu << "\n[Tekan Enter Untuk Melanjutkan...]" << putih;
                     cin.ignore(10000, '\n');
                     cin.get();
                     break;
@@ -79,7 +84,7 @@ int main () {
                     double hasilMeter = 0;
                     double hasilCentimeter = 0;
 
-                    cout << "\n--- Konversi Kilometer Ke Meter dan Centimater ---\n";
+                    cout << cyan << "\n--- Konversi Kilometer Ke Meter dan Centimater ---\n";
                     cout << "\nMasukkan Angka: ";
                     cin >> kilometer;
 
@@ -87,8 +92,8 @@ int main () {
                     hasilCentimeter = kilometer * 100000;
                     cout << "\nHasil Konversi dari " << kilometer << " Kilometer Adalah:\n";
                     cout << "-> " << hasilMeter << " Meter\n"; 
-                    cout << "-> " << hasilCentimeter << " Centimeter\n";
-                    cout << "\n[Tekan Enter Untuk Melanjutkan...]";
+                    cout << "-> " << hasilCentimeter << " Centimeter\n" << putih;
+                    cout << abu << "\n[Tekan Enter Untuk Melanjutkan...]" << putih;
                     cin.ignore(10000, '\n');
                     cin.get();
                     break;
@@ -98,7 +103,7 @@ int main () {
                     double hasilMeter = 0;
                     double hasilKilometer = 0;
 
-                    cout << "\n--- Konversi Centimeter Ke Meter dan Kilometer ---\n";
+                    cout << magenta << "\n--- Konversi Centimeter Ke Meter dan Kilometer ---\n";
                     cout << "\nMasukkan Angka: ";
                     cin >> centimeter;
 
@@ -106,24 +111,24 @@ int main () {
                     hasilKilometer = centimeter / 100000.0;
                     cout << "\nHasil Konversi dari " << centimeter << " Centimeter Adalah:\n";
                     cout << "-> " << hasilMeter << " Meter\n"; 
-                    cout << "-> " << hasilKilometer << " Kilometer\n";
-                    cout << "\n[Tekan Enter Untuk Melanjutkan...]";
+                    cout << "-> " << hasilKilometer << " Kilometer\n" << putih;
+                    cout << abu << "\n[Tekan Enter Untuk Melanjutkan...]" << putih;
                     cin.ignore(10000, '\n');
                     cin.get();
                     break;
                 }
                 case 4:{
-                    cout << "\nAnda Keluar dari program\n";
+                    cout << merah <<"\nAnda Keluar dari program. :)\n" << putih;
                     
-                    cout << "\n[Tekan Enter Untuk Melanjutkan...]\n";
+                    cout << abu << "\n[Tekan Enter Untuk Melanjutkan...]" << putih;
                     cin.ignore(10000, '\n');
                     cin.get();
                     break;
                 }
                 
                 default:
-                    cout << "Pilihan Tidak Valid!" << endl;
-                    cout << "\n[Tekan Enter Untuk Melanjutkan...]";
+                    cout << merah << "Error: Pilihan Tidak Valid!" << putih << endl;
+                    cout << abu << "\n[Tekan Enter Untuk Melanjutkan...]" << putih;
                     cin.ignore(10000, '\n');
                     cin.get();
                     continue;
@@ -133,22 +138,21 @@ int main () {
 
             break;
 
+        } else if (percobaan == 3) {
+            cout << merah << "\nKesempatan login habis. Akses ditolak!\n" << putih;
+            cout << "Jumlah percobaan: " << percobaan++ << endl;
+            cout << '\n'; 
+            break;
+
         } else {
-            cout << "\nUsername atau Password salah! Silahkan Coba Lagi";
+            cout << merah << "\nUsername atau Password salah! Silahkan Coba Lagi" << putih;
             percobaan++;
             cout << "\nJumlah percobaan: " << percobaan - 1 << endl; 
-            cout << "\n[Tekan Enter Untuk Melanjutkan...]";
+            cout << abu << "\n[Tekan Enter Untuk Melanjutkan...]" << putih;
             cin.ignore(10000, '\n');
             cin.get();
             continue;
 
-            if (percobaan <= 3) {
-            cout << "Kesempatan login habis. Akses ditolak!\n";
-            cout << "\n[Tekan Enter Untuk Melanjutkan...]";
-            cin.ignore(10000, '\n');
-            cin.get();
-            break;
-            } 
         }
     }
     
