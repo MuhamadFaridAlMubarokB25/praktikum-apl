@@ -14,11 +14,10 @@ using namespace std;
 
 int main () {
 
-    string username, password;
+    string username, password, pilihan;
     string usernameBenar = "farid";
     string passwordBenar = "087";
     int percobaan = 1;
-    int pilihan;
 
     while (percobaan <= 3) {
         system("cls");
@@ -46,7 +45,6 @@ int main () {
 
             do {
                 system("cls");
-                
 
                 cout << "===========================================\n";
                 cout << "|              PILIH KONVERSI             |\n";  
@@ -58,19 +56,9 @@ int main () {
                 cout << "===========================================\n";
                 cout << "Masukkan Opsi: ";
                 cin >> pilihan;
-
-                if (!(cin >> pilihan)) {
-                    cin.clear();
-                    cout << merah << "\nError: Pilihan Tidak Valid!\n" << putih;
-                    cout << abu << "\n[Tekan Enter Untuk Melanjutkan...]" << putih;
-                    cin.ignore(10000, '\n');
-                    cin.get();
-                    continue;
-                }
                 
-                switch (pilihan)
-                {
-                case 1: {
+                if (pilihan == "1") {
+
                     double panjang;
                     double hasilKilometer = 0;
                     double hasilCentimeter = 0;
@@ -89,9 +77,9 @@ int main () {
                     cout << abu << "\n[Tekan Enter Untuk Melanjutkan...]" << putih;
                     cin.ignore(10000, '\n');
                     cin.get();
-                    break;
-                }
-                case 2: {
+
+                } else if (pilihan == "2") {
+
                     double panjang;
                     double hasilMeter = 0;
                     double hasilCentimeter = 0;
@@ -106,12 +94,12 @@ int main () {
                     cout << "\nHasil Konversi dari " << panjang << " Kilometer Adalah:\n";
                     cout << "-> " << hasilMeter << " Meter\n"; 
                     cout << "-> " << hasilCentimeter << " Centimeter\n" << putih;
+
                     cout << abu << "\n[Tekan Enter Untuk Melanjutkan...]" << putih;
                     cin.ignore(10000, '\n');
                     cin.get();
-                    break;
-                }
-                case 3:{
+
+                } else if (pilihan == "3") {
                     double panjang;
                     double hasilMeter = 0;
                     double hasilKilometer = 0;
@@ -121,34 +109,29 @@ int main () {
                     cin >> panjang;
 
                     hasilMeter = panjang / 100;
-                    hasilKilometer = panjang / 100000.0;
+                    hasilKilometer = panjang / 100000;
 
                     cout << "\nHasil Konversi dari " << panjang << " Centimeter Adalah:\n";
                     cout << "-> " << hasilMeter << " Meter\n"; 
                     cout << "-> " << hasilKilometer << " Kilometer\n" << putih;
+
                     cout << abu << "\n[Tekan Enter Untuk Melanjutkan...]" << putih;
                     cin.ignore(10000, '\n');
                     cin.get();
-                    break;
-                }
-                case 4:{
+
+                } else if (pilihan == "4") {
                     cout << merah <<"\nAnda Keluar dari program. :)\n" << putih;
-                    
-                    cout << abu << "\n[Tekan Enter Untuk Melanjutkan...]" << putih;
-                    cin.ignore(10000, '\n');
-                    cin.get();
                     break;
-                }
-                
-                default:
+
+                } else {
                     cout << merah << "Error: Pilihan Tidak Valid!" << putih << endl;
+
                     cout << abu << "\n[Tekan Enter Untuk Melanjutkan...]" << putih;
                     cin.ignore(10000, '\n');
                     cin.get();
-                    continue;
                 }
 
-            } while (pilihan != 4);
+            } while (pilihan != "4");
 
             break;
 
@@ -161,7 +144,8 @@ int main () {
         } else {
             cout << merah << "\nUsername atau Password salah! Silahkan Coba Lagi" << putih;
             percobaan++;
-            cout << "\nJumlah percobaan: " << percobaan - 1 << endl; 
+            cout << "\nJumlah percobaan: " << percobaan - 1 << endl;
+
             cout << abu << "\n[Tekan Enter Untuk Melanjutkan...]" << putih;
             cin.ignore(10000, '\n');
             cin.get();
