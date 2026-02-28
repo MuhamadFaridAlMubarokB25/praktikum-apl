@@ -4,12 +4,12 @@ using namespace std;
 // Agar Lebih Mudah Nge-Run
 // g++ 2509106087-MuhamadFaridAlMubarok-PT-1.cpp -o 2509106087-MuhamadFaridAlMubarok-PT-1 ; .\2509106087-MuhamadFaridAlMubarok-PT-1
 
+#define putih   "\033[0m"
 #define merah   "\033[31m"
 #define biru    "\033[34m"
 #define hijau   "\033[32m"
 #define cyan    "\033[36m"
 #define magenta "\033[35m"
-#define putih   "\033[0m"
 #define abu     "\033[90m"
 
 int main () {
@@ -41,7 +41,6 @@ int main () {
             cout << abu << "\n[Tekan Enter Untuk Melanjutkan...]" << putih;
             cin.ignore(10000, '\n');
             cin.get();
-
 
             do {
                 system("cls");
